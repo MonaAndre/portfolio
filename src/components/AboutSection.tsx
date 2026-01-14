@@ -57,7 +57,7 @@ export const AboutSection = () => {
               </p>
             </div>
 
-            {/* Stats with unique design */}
+            {/* Stats */}
             <div className="grid grid-cols-2 gap-6 mt-12">
               <div className="p-6 rounded-2xl border-gradient bg-card/30">
                 <span className="text-4xl font-bold bg-linear-to-br from-orange-500 to-fuchsia-500 bg-clip-text text-transparent">3+</span>

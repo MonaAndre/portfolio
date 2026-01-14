@@ -35,7 +35,7 @@ export const HeroSection = () => {
             och studerar <span className="text-primary font-medium">.NET Systemutveckling</span>.
           </p>
 
-          {/* CTA with unique design */}
+        
           <div className="flex flex-wrap items-center gap-6 pt-6">
             <a
               href="#projects"

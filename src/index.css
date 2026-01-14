@@ -103,7 +103,7 @@
   }
 }
 
-/* 5) Dina komponenter */
+/* 5) Komponenter */
 @layer components {
   .font-mono {
     font-family: var(--font-mono);
