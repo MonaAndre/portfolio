@@ -1,20 +1,20 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Layout } from "./pages/Layout";
 import { Home } from "./pages/Home";
-import { NotFound } from "./pages/NotFound";
+import { Layout } from "./pages/Layout";
 
-export const router = createBrowserRouter(
-  [
-    {
-      path: "/",
-      element: <Layout />,
-      children: [
-        { index: true, element: <Home /> },
-        { path: "*", element: <NotFound /> },
-      ],
-    },
-  ],
+
+// Base path for GitHub Pages
+const base = "/portfolio";
+
+export const router = createBrowserRouter([
   {
-    basename: "/portfolio",
-  }
-);
+    path: `${base}/`, // Prefix all paths with the base directory
+    element: <Layout />,
+    children: [
+      {
+        path: `${base}/`, // Home page
+        element: <Home />,
+      },
+    ],
+  },
+]);
