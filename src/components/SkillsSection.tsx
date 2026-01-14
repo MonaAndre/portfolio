@@ -32,7 +32,7 @@ export const SkillsSection = () => {
                 </div>
 
                 <h2 className="text-3xl md:text-5xl font-bold mb-16 tracking-tight">
-                    Min tekniska <span className="bg-linear-to-br from-orange-500 to-fuchsia-500 bg-clip-text text-transparent">stack</span>
+                    Mina tekniska <span className="bg-linear-to-br from-orange-500 to-fuchsia-500 bg-clip-text text-transparent">stack</span>
                 </h2>
 
                 <div className="grid md:grid-cols-3 gap-8">

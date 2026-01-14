@@ -23,7 +23,7 @@ export const ProjectsSection = () => {
       title: "FindTime (Delad kalenderapplikation)",
       description:
         "En API för delad kalender projekt där användare kan skapa och hantera tillgänglighet för att hitta gemensamma tider. Projektet är byggt med fokus på datamodellering, API-struktur och databashantering.",
-      tech: ["C#", "Entity Framework", "PostgreSQL"],
+      tech: [".NET", "Entity Framework", "PostgreSQL"],
       github: "https://github.com/MonaAndre/FindTime-Backend.git",
       live: null,
       images: [findTime],
