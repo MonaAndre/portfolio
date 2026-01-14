@@ -80,7 +80,7 @@ export const ProjectsSection = () => {
   const otherProjects = projects.filter(p => !p.featured);
 
   return (
-    <section id="projects" className="py-32 px-6">
+    <section id="projects" className="py-10 md:py-25 px-6">
       <div className="max-w-5xl mx-auto">
         <div className="flex items-center gap-4 mb-6">
           <span className="text-xs font-mono text-primary tracking-wider">03</span>
@@ -88,7 +88,7 @@ export const ProjectsSection = () => {
           <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider">Portfolio</span>
         </div>
 
-        <h2 className="text-4xl md:text-5xl font-bold mb-16 tracking-tight">
+        <h2 className="text-3xl md:text-5xl font-bold mb-16 tracking-tight">
           Utvalda <span className="bg-linear-to-br from-orange-500 to-fuchsia-500 bg-clip-text text-transparent">projekt</span>
         </h2>
 

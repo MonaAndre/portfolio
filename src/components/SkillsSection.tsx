@@ -17,7 +17,7 @@ export const SkillsSection = () => {
         },
     ];
     return (
-        <section id="skills" className="py-32 px-6 bg-card/30 relative overflow-hidden">
+        <section id="skills" className="py-10 md:py-25 px-6 bg-card/30 relative overflow-hidden">
             {/* Background pattern */}
             <div className="absolute inset-0 opacity-30">
                 <div className="absolute top-0 left-1/4 w-100 h-100 rounded-full bg-primary/10 blur-3xl" />
@@ -31,7 +31,7 @@ export const SkillsSection = () => {
                     <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider">Kompetenser</span>
                 </div>
 
-                <h2 className="text-4xl md:text-5xl font-bold mb-16 tracking-tight">
+                <h2 className="text-3xl md:text-5xl font-bold mb-16 tracking-tight">
                     Min tekniska <span className="bg-linear-to-br from-orange-500 to-fuchsia-500 bg-clip-text text-transparent">stack</span>
                 </h2>
 

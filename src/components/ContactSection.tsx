@@ -2,7 +2,7 @@
 
 export const ContactSection = () => {
   return (
-    <section id="contact" className="py-32 px-6 bg-card/30 relative overflow-hidden">
+    <section id="contact" className="py-10 md:py-25 px-6 bg-card/30 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute bottom-0 left-1/4 w-95 h-125 rounded-full bg-primary/5 blur-2xl" />
@@ -16,10 +16,10 @@ export const ContactSection = () => {
           <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider">Kontakt</span>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left side - CTA */}
           <div>
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight leading-tight">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight leading-tight">
               Låt oss bygga något <span className=" bg-linear-to-br from-orange-500 to-fuchsia-500 bg-clip-text text-transparent">fantastiskt</span> tillsammans
             </h2>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
@@ -28,7 +28,7 @@ export const ContactSection = () => {
 
             <a
               href="mailto:monaelizabet@gmail.com"
-              className="group inline-flex items-center gap-4 text-2xl md:text-3xl font-medium hover:text-primary transition-colors"
+              className="group inline-flex items-center gap-4 text-base md:text-3xl font-medium hover:text-primary transition-colors"
             >
               <span className="p-4 rounded-full bg-primary text-primary-foreground group-hover:glow-accent transition-all">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-envelope" viewBox="0 0 16 16">

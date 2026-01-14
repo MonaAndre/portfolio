@@ -1,6 +1,6 @@
 export const AboutSection = () => {
   return (
-    <section id="about" className="py-32 px-6 relative">
+    <section id="about" className="py-10 md:py-25 px-6 relative">
       {/* Background accent */}
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-border to-transparent" />
 
@@ -15,7 +15,7 @@ export const AboutSection = () => {
                 <div className="absolute inset-0 bg-linear-to-br from-primary/10 via-transparent to-accent/10" />
                 <div className="w-full h-full flex items-center justify-center">
                   <div className="text-center absolute bottom-4">
-                    <span className="text-4xl font-bold text-white">{"{Mona Andreeva }"}</span>
+                    <span className="text-2xl md:text-4xl font-bold text-white">{"{Mona Andreeva}"}</span>
                     <p className="text-muted-foreground font-mono text-sm mt-4">dev.portfolio</p>
                   </div>
                 </div>
@@ -39,7 +39,7 @@ export const AboutSection = () => {
               <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider">Om mig</span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight">
+            <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight">
               Kreativ utvecklare med öga för <span className="bg-linear-to-br from-orange-500 to-fuchsia-500 bg-clip-text text-transparent">
                 detaljer
               </span>

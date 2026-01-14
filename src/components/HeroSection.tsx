@@ -22,7 +22,7 @@ export const HeroSection = () => {
 
           {/* Name with unique typography */}
           <div className="space-y-4 text-start">
-            <h1 className="text-6xl md:text-6xl lg:text-8xl font-bold tracking-tighter">
+            <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold tracking-tighter">
               <span className="text-foreground">Frontend</span>
               <br />
               <span className="text-gradient"><span className="text-white dark:text-black p-2">Utvecklare</span></span>
