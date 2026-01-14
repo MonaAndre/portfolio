@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isCvModalOpen, setIsCvModalOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -19,6 +20,14 @@ export const Navigation = () => {
     { href: "#projects", label: "Projekt", num: "03" },
     { href: "#contact", label: "Kontakt", num: "04" },
   ];
+
+  const openCVmodal = () => {
+    setIsCvModalOpen(true);
+  };
+
+  const closeCVmodal = () => {
+    setIsCvModalOpen(false);
+  };
 
   const toggleTheme = () => {
     const htmlElement = document.documentElement;
@@ -55,6 +64,32 @@ export const Navigation = () => {
             🌙 / ☀️
           </button>
 
+          <div className="relative">
+            <button className="inline hover:bg-linear-to-br hover:from-orange-500 hover:to-fuchsia-500 hover:bg-clip-text hover:text-transparent" onClick={openCVmodal}>CV</button>
+            <div className={isCvModalOpen ? "absolute p-7 top-10 right-0 flex flex-col justify-center items-center rounded-xl gap-2  animate-fade-in border-t border-border bg-background/80 backdrop-blur-xl border-b" : "hidden"}>
+              <button className="ml-auto absolute top-1 right-0 flex justify-center w-8  p-1 rounded-2xl border border-border bg-card/30" onClick={closeCVmodal}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-x" viewBox="0 0 16 16">
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+              </svg></button>
+              <a
+                href={cvUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="px-4  py-2 rounded-full border-gradient text-sm font-medium"
+              >
+                Preview CV
+              </a>
+              <span>eller</span>
+              <a
+                href={cvUrl} download="cv.pdf"
+                className=" px-4 py-2 rounded-full border-gradient text-sm font-medium text-center hover:bg-card/50 transition-colors"
+              >
+                Ladda CV
+              </a>
+            </div>
+          </div>
+
+
+
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
@@ -71,14 +106,8 @@ export const Navigation = () => {
             ))}
           </div>
 
-          {/* CV Button */}
+          {/* Theme Button */}
           <div className="hidden md:block">
-            <a
-              href={cvUrl} download="cv.pdf"
-              className="px-4 py-2 rounded-full border-gradient  text-sm font-medium hover:bg-card/50 transition-colors"
-            >
-              Ladda CV
-            </a>
             <button
               onClick={toggleTheme}
               className="cursor-pointer px-4 py-2 ml-4 rounded-full border-gradient text-xs font-medium hover:bg-card/50 transition-colors " >
@@ -125,12 +154,7 @@ export const Navigation = () => {
                 </a>
               ))}
 
-              <a
-                href={cvUrl} download="cv.pdf"
-                className="mt-4 px-4 py-2 rounded-full border-gradient text-sm font-medium text-center hover:bg-card/50 transition-colors"
-              >
-                Ladda CV
-              </a>
+
             </div>
           </div>
         )}
