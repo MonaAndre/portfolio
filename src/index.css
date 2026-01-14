@@ -91,13 +91,12 @@
 
   html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
-
   }
 
   body {
     @apply bg-background text-foreground antialiased;
     font-family: var(--font-sans);
+    overflow-x: hidden;
   }
 
   ::selection {
