@@ -1,0 +1,189 @@
+@import "tailwindcss";
+
+/* 1) Gör så att dark: fungerar med class="dark" på <html> eller <body> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* 2) Tokens (LIGHT). Dessa skapar klasser som bg-background, text-foreground, border-border, osv */
+@theme {
+  --color-background: hsl(0 0% 100%);
+  --color-foreground: hsl(240 10% 10%);
+
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(240 10% 10%);
+
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(240 10% 10%);
+
+  --color-primary: hsl(24 95% 55%);
+  --color-primary-foreground: hsl(0 0% 100%);
+
+  --color-secondary: hsl(240 5% 96%);
+  --color-secondary-foreground: hsl(240 6% 20%);
+
+  --color-muted: hsl(240 5% 94%);
+  --color-muted-foreground: hsl(240 4% 45%);
+
+  --color-accent: hsl(280 85% 60%);
+  --color-accent-foreground: hsl(0 0% 100%);
+
+  --color-destructive: hsl(0 84% 60%);
+  --color-destructive-foreground: hsl(0 0% 100%);
+
+  --color-border: hsl(240 6% 90%);
+  --color-input: hsl(240 6% 90%);
+  --color-ring: hsl(24 95% 55%);
+
+  --radius-lg: 0.75rem;
+  --font-sans: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+    --gradient-surface: hsl(0 0% 100%);
+}
+
+/* 3) DARK: override:a samma tokens när .dark finns på html/body */
+@layer theme {
+  .dark {
+    --color-background: hsl(240 10% 4%);
+    --color-foreground: hsl(60 9% 98%);
+
+    --color-card: hsl(240 10% 6%);
+    --color-card-foreground: hsl(60 9% 98%);
+
+    --color-popover: hsl(240 10% 6%);
+    --color-popover-foreground: hsl(60 9% 98%);
+
+    --color-primary: hsl(24 95% 60%);
+    --color-primary-foreground: hsl(240 10% 4%);
+
+    --color-secondary: hsl(240 8% 12%);
+    --color-secondary-foreground: hsl(60 9% 80%);
+
+    --color-muted: hsl(240 8% 16%);
+    --color-muted-foreground: hsl(240 5% 55%);
+
+    --color-accent: hsl(280 85% 65%);
+    --color-accent-foreground: hsl(60 9% 98%);
+
+    --color-destructive: hsl(0 84% 60%);
+    --color-destructive-foreground: hsl(60 9% 98%);
+
+    --color-border: hsl(240 8% 16%);
+    --color-input: hsl(240 8% 16%);
+    --color-ring: hsl(24 95% 60%);
+
+    --radius-lg: 0.75rem;
+    --font-sans: "Space Grotesk", sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+     --gradient-surface: hsl(0 0% 0%);
+  }
+}
+
+/* 4) Bas-styles */
+@layer base {
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+  }
+
+  ::selection {
+    @apply bg-primary/30 text-foreground;
+  }
+}
+
+/* 5) Dina komponenter */
+@layer components {
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background: linear-gradient(135deg, hsl(24 95% 60%) 0%, hsl(280 85% 65%) 100%);
+  }
+
+  .border-gradient {
+    border: 1px solid transparent;
+    background:
+      linear-gradient(
+        var(--gradient-surface),
+        var(--gradient-surface)
+      ) padding-box,
+      linear-gradient(
+        135deg,
+        hsl(24 95% 60%),
+        hsl(280 85% 65%)
+      ) border-box;
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 60px -15px hsl(24 95% 60% / 0.4);
+  }
+}
+
+.bg-img{
+  background-image: url('/src/imgs/me.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* 6) Utilities + keyframes */
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
