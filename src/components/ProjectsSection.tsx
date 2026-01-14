@@ -33,9 +33,8 @@ export const ProjectsSection = () => {
       title: "Online Chat med C# och Socket.IO",
       description:
         "Online Chat med C# och Socket.IO",
-      tech: ["JavaScript", "CSS", "Node.js", "MySQL"],
-      github: "https://github.com/MonaAndre/chatstart-main.git",
-      githubServer: "https://github.com/MonaAndre/chatstart-backend.git",
+      tech: ["SocketIO", "C#"],
+      github: "https://github.com/MonaAndre/ChatExamination.git",
       live: null,
       images: [chatCSharp],
       featured: true,

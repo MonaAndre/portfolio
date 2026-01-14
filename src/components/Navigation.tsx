@@ -73,7 +73,7 @@ export const Navigation = () => {
           {/* CV Button */}
           <div className="hidden md:block">
             <a
-              href="#"
+              href="cv.pdf" download="cv.pdf"
               className="px-4 py-2 rounded-full border-gradient  text-sm font-medium hover:bg-card/50 transition-colors"
             >
               Ladda CV
@@ -125,7 +125,7 @@ export const Navigation = () => {
               ))}
 
               <a
-                href="#"
+               href="/cv.pdf" download="cv.pdf"
                 className="mt-4 px-4 py-2 rounded-full border-gradient text-sm font-medium text-center hover:bg-card/50 transition-colors"
               >
                 Ladda CV
