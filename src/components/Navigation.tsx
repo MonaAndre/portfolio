@@ -66,7 +66,7 @@ export const Navigation = () => {
 
           <div className="relative">
             <button className="inline hover:bg-linear-to-br hover:from-orange-500 hover:to-fuchsia-500 hover:bg-clip-text hover:text-transparent" onClick={openCVmodal}>CV</button>
-            <div className={isCvModalOpen ? "absolute p-7 top-10 right-0 flex flex-col justify-center items-center rounded-xl gap-2  animate-fade-in border-t border-border bg-background/80 backdrop-blur-xl border-b" : "hidden"}>
+            <div className={isCvModalOpen ? "absolute p-7 w-60 md:w-100 top-10 right-0 md:left-10 flex flex-col justify-center items-center rounded-xl gap-2  animate-fade-in border-t border-border bg-background/80 backdrop-blur-xl border-b" : "hidden"}>
               <button className="ml-auto absolute top-1 right-0 flex justify-center w-8  p-1 rounded-2xl border border-border bg-card/30" onClick={closeCVmodal}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-x" viewBox="0 0 16 16">
                 <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
               </svg></button>
@@ -74,16 +74,22 @@ export const Navigation = () => {
                 href={cvUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="px-4  py-2 rounded-full border-gradient text-sm font-medium"
+                className="px-4 flex gap-2 items-center py-2 rounded-full border-gradient text-sm font-medium"
               >
-                Preview CV
+                Preview <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                </svg>
               </a>
               <span>eller</span>
               <a
                 href={cvUrl} download="cv.pdf"
-                className=" px-4 py-2 rounded-full border-gradient text-sm font-medium text-center hover:bg-card/50 transition-colors"
+                className=" px-4 flex gap-2 items-center py-2 rounded-full border-gradient text-sm font-medium text-center hover:bg-card/50 transition-colors"
               >
-                Ladda CV
+                Ladda ner<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-download" viewBox="0 0 16 16">
+                  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                  <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
+                </svg>
               </a>
             </div>
           </div>
