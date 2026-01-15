@@ -90,7 +90,7 @@ export const Navigation = () => {
           <div className="relative">
             <button className="inline cursor-pointer hover:bg-linear-to-br hover:from-orange-500 hover:to-fuchsia-500 hover:bg-clip-text hover:text-transparent" onClick={openCVmodal}>CV</button>
             <div className={isCvModalOpen ? "absolute p-7 w-60 md:w-100 top-10 right-0 md:left-10 flex flex-col justify-center items-center rounded-xl gap-2  animate-fade-in border-t border-border bg-background/80 backdrop-blur-xl border-b" : "hidden"}>
-              <button className="ml-auto absolute top-1 right-0 flex justify-center w-8  p-1 rounded-2xl border border-border bg-card/30" onClick={closeCVmodal}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-x" viewBox="0 0 16 16">
+              <button className="ml-auto cursor-pointer absolute top-1 right-0 flex justify-center w-8  p-1 rounded-2xl border border-border bg-card/30" onClick={closeCVmodal}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-x" viewBox="0 0 16 16">
                 <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
               </svg></button>
               <a
