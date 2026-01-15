@@ -1,6 +1,8 @@
+import { useTranslation } from "react-i18next";
+
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
-
+  const { t } = useTranslation();
   return (
     <footer className="py-12 px-6 border-t border-border">
       <div className="max-w-5xl mx-auto">
@@ -12,18 +14,18 @@ export const Footer = () => {
             </span>
             <span className="font-medium">Portfolio</span>
           </div>
-          
+
           {/* Copyright */}
           <p className="text-sm text-muted-foreground text-center">
-             © {currentYear}
+            © {currentYear}
           </p>
-          
+
           {/* Back to top */}
-          <a 
-            href="#" 
+          <a
+            href="#"
             className="text-sm text-muted-foreground hover:text-primary transition-colors"
           >
-            Tillbaka upp ↑
+            {t("footer.backToUp")} ↑
           </a>
         </div>
       </div>

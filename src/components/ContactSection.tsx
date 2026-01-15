@@ -1,6 +1,7 @@
-
+import { useTranslation } from "react-i18next";
 
 export const ContactSection = () => {
+  const { t } = useTranslation();
   return (
     <section id="contact" className="py-10 md:py-25 px-6 bg-card/30 relative overflow-hidden">
       {/* Background elements */}
@@ -13,17 +14,17 @@ export const ContactSection = () => {
         <div className="flex items-center gap-4 mb-6">
           <span className="text-xs font-mono text-primary tracking-wider">04</span>
           <div className="w-12 h-px bg-primary" />
-          <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider">Kontakt</span>
+          <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider">{t("contact.cta")}</span>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left side - CTA */}
           <div>
             <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight leading-tight">
-              Låt oss bygga något <span className=" bg-linear-to-br from-orange-500 to-fuchsia-500 bg-clip-text text-transparent">fantastiskt</span> tillsammans
+              {t("contact.title")} <span className=" bg-linear-to-br from-orange-500 to-fuchsia-500 bg-clip-text text-transparent">{t("contact.text")}</span> {t("contact.together")}
             </h2>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              Har du ett projekt i åtanke? Jag är alltid öppen för att diskutera nya möjligheter.
+              {t("contact.contactText")}
             </p>
 
             <a
@@ -45,7 +46,7 @@ export const ContactSection = () => {
           {/* Right side - Links card */}
           <div className="p-8 md:p-12 rounded-3xl border-gradient bg-background/50 backdrop-blur-sm">
             <p className="text-sm font-mono text-muted-foreground uppercase tracking-wider mb-8">
-              Följ mig
+              {t("contact.followMe")}
             </p>
 
             <div className="space-y-4">
@@ -56,12 +57,15 @@ export const ContactSection = () => {
                 className="group flex items-center justify-between p-4 rounded-2xl border border-border hover:border-primary/50 hover:bg-card/50 transition-all"
               >
                 <div className="flex items-center gap-4">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 18 20" fill="none">
-                <path d="M12.318 1.30961C14.7048 -0.31279 15.7506 0.0303135 15.7506 0.0303135C16.437 1.74629 16.0004 3.02593 15.8756 3.33793C16.6709 4.21144 17.1539 5.31893 17.1539 6.69145C17.1539 11.4805 14.2373 12.5415 11.4605 12.8536C11.9129 13.2436 12.3023 13.9924 12.3023 15.1621C12.3023 16.7956 12.3517 18.0288 12.3043 19.4092C11.1045 19.7922 9.82638 20 8.4996 20C7.63992 20 6.80069 19.9124 5.98983 19.7471C5.9679 18.8748 6.06307 17.213 6.06307 16.2696C2.92793 16.8467 2.11651 15.5058 1.86679 14.8038C1.72642 14.445 1.11779 13.3378 0.587488 13.0411C0.150688 12.8071 -0.473337 12.2295 0.571863 12.2139C1.55448 12.1985 2.25684 13.1188 2.49081 13.4932C3.61402 15.3805 5.408 14.8501 6.12557 14.5225C6.23481 13.7116 6.56179 13.1655 6.9205 12.8536C4.14376 12.5415 1.24276 11.4649 1.24276 6.69145C1.24279 5.33452 1.72573 4.21144 2.52108 3.33793C2.39628 3.02593 1.9597 1.7463 2.64608 0.0303135C2.64608 0.0303135 3.6919 -0.29719 6.0787 1.30961C7.07685 1.02892 8.13732 0.888755 9.19784 0.888712C10.2585 0.888712 11.3197 1.02887 12.318 1.30961Z" fill="currentColor" />
-              </svg>
-                  <div>
+                  <div className="w-10 h-10 flex justify-center items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 18 20" fill="none">
+                      <path d="M12.318 1.30961C14.7048 -0.31279 15.7506 0.0303135 15.7506 0.0303135C16.437 1.74629 16.0004 3.02593 15.8756 3.33793C16.6709 4.21144 17.1539 5.31893 17.1539 6.69145C17.1539 11.4805 14.2373 12.5415 11.4605 12.8536C11.9129 13.2436 12.3023 13.9924 12.3023 15.1621C12.3023 16.7956 12.3517 18.0288 12.3043 19.4092C11.1045 19.7922 9.82638 20 8.4996 20C7.63992 20 6.80069 19.9124 5.98983 19.7471C5.9679 18.8748 6.06307 17.213 6.06307 16.2696C2.92793 16.8467 2.11651 15.5058 1.86679 14.8038C1.72642 14.445 1.11779 13.3378 0.587488 13.0411C0.150688 12.8071 -0.473337 12.2295 0.571863 12.2139C1.55448 12.1985 2.25684 13.1188 2.49081 13.4932C3.61402 15.3805 5.408 14.8501 6.12557 14.5225C6.23481 13.7116 6.56179 13.1655 6.9205 12.8536C4.14376 12.5415 1.24276 11.4649 1.24276 6.69145C1.24279 5.33452 1.72573 4.21144 2.52108 3.33793C2.39628 3.02593 1.9597 1.7463 2.64608 0.0303135C2.64608 0.0303135 3.6919 -0.29719 6.0787 1.30961C7.07685 1.02892 8.13732 0.888755 9.19784 0.888712C10.2585 0.888712 11.3197 1.02887 12.318 1.30961Z" fill="currentColor" />
+                    </svg>
+                  </div>
+
+                  <div className="text-start">
                     <p className="font-medium">GitHub</p>
-                    <p className="text-sm text-muted-foreground">Mina projekt</p>
+                    <p className="text-sm text-muted-foreground">{t("contact.myProjects")}</p>
                   </div>
                 </div>
                 <span className="text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-up-right" viewBox="0 0 16 16">
@@ -86,21 +90,14 @@ export const ContactSection = () => {
 
                     <g transform="scale(0.82) translate(1.75 1.75)">
                       <path fill="currentColor"
-                        d="M4.943 6.169H2.542v7.225h2.401V6.169z
-         M3.743 3.934c.837 0 1.358-.554 1.358-1.248
-         -.015-.709-.52-1.248-1.342-1.248S2.4 1.977
-         2.4 2.685c0 .694.521 1.248 1.327 1.248z
-         M8.451 13.394V9.359c0-.216.016-.432.08-.586
-         .173-.431.568-.878 1.232-.878.869 0
-         1.216.662 1.216 1.634v3.865h2.401V9.25
-         c0-2.22-1.184-3.252-2.764-3.252-1.274 0
-         -1.845.7-2.165 1.193v.025h-.016l.016-.025
-         V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                        d="M4.943 6.169H2.542v7.225h2.401V6.169z M3.743 3.934c.837 0 1.358-.554 1.358-1.248 -.015-.709-.52-1.248-1.342-1.248S2.4 1.977
+                            2.4 2.685c0 .694.521 1.248 1.327 1.248z  M8.451 13.394V9.359c0-.216.016-.432.08-.586  .173-.431.568-.878 1.232-.878.869 0
+                             1.216.662 1.216 1.634v3.865h2.401V9.25 c0-2.22-1.184-3.252-2.764-3.252-1.274 0    -1.845.7-2.165 1.193v.025h-.016l.016-.025   V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
                     </g>
                   </svg>
-                  <div>
+                  <div className="text-start">
                     <p className="font-medium">LinkedIn</p>
-                    <p className="text-sm text-muted-foreground">Professionellt nätverk</p>
+                    <p className="text-sm text-muted-foreground">{t("contact.network")}</p>
                   </div>
                 </div>
                 <span className="text-muted-foreground group-hover:text-accent group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-up-right" viewBox="0 0 16 16">
@@ -111,7 +108,7 @@ export const ContactSection = () => {
 
             <div className="mt-8 pt-8 border-t border-border">
               <p className="text-sm text-muted-foreground">
-                📍 Stockholm, Sverige
+                📍 Stockholm, {t("contact.sweden")}
               </p>
             </div>
           </div>

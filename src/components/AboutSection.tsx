@@ -1,4 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 export const AboutSection = () => {
+ const {t} = useTranslation();
   return (
     <section id="about" className="py-10 md:py-25 px-6 relative">
       {/* Background accent */}
@@ -36,24 +39,22 @@ export const AboutSection = () => {
             <div className="flex items-center gap-4 mb-6">
               <span className="text-xs font-mono text-primary tracking-wider">01</span>
               <div className="w-12 h-px bg-primary" />
-              <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider">Om mig</span>
+              <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider">{t("about.aboutMe")}</span>
             </div>
 
             <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight">
-              Kreativ utvecklare med öga för <span className="bg-linear-to-br from-orange-500 to-fuchsia-500 bg-clip-text text-transparent">
-                detaljer
+              {t("about.title")} <span className="bg-linear-to-br from-orange-500 to-fuchsia-500 bg-clip-text text-transparent">
+                {t("about.details")}
               </span>
 
             </h2>
 
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Jag är en passionerad frontend-utvecklare som fördjupar mina kunskaper
-                inom systemutveckling med fokus på .NET-ekosystemet.
+               {t("about.aboutText")}
               </p>
               <p>
-                Kombinerar kreativitet med teknisk kompetens för att bygga moderna
-                webbapplikationer som både ser bra ut och fungerar felfritt.
+              {t("about.aboutText2")}
               </p>
             </div>
 
@@ -61,11 +62,11 @@ export const AboutSection = () => {
             <div className="grid grid-cols-2 gap-6 mt-12">
               <div className="p-6 rounded-2xl border-gradient bg-card/30">
                 <span className="text-4xl font-bold bg-linear-to-br from-orange-500 to-fuchsia-500 bg-clip-text text-transparent">3+</span>
-                <p className="text-sm text-muted-foreground mt-2">År erfarenhet</p>
+                <p className="text-sm text-muted-foreground mt-2">{t("about.yearsExperience")}</p>
               </div>
               <div className="p-6 rounded-2xl border-gradient bg-card/30">
                 <span className="text-4xl font-bold bg-linear-to-br from-orange-500 to-fuchsia-500 bg-clip-text text-transparent">10+</span>
-                <p className="text-sm text-muted-foreground mt-2">Avslutade projekt</p>
+                <p className="text-sm text-muted-foreground mt-2">{t("about.completedProjects")}</p>
               </div>
             </div>
           </div>

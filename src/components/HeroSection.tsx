@@ -1,4 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 export const HeroSection = () => {
+  const { t } = useTranslation();
   return (
     <section className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
       {/* Background geometric elements */}
@@ -15,7 +18,7 @@ export const HeroSection = () => {
           <div className="text-start mb-6">
             <div className="inline-flex ml-auto items-center gap-2 px-4 py-2 rounded-full border-gradient bg-card/50 backdrop-blur-sm">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-sm text-muted-foreground font-mono">Öppen för jobb</span>
+              <span className="text-sm text-muted-foreground font-mono">{t("hero.openForWork")}</span>
             </div>
           </div>
 
@@ -23,25 +26,24 @@ export const HeroSection = () => {
           {/* Name with unique typography */}
           <div className="space-y-4 text-start">
             <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold tracking-tighter">
-              <span className="text-foreground">Frontend</span>
+              <span className="text-foreground">{t("hero.frontend")}</span>
               <br />
-              <span className="text-gradient"><span className="text-white dark:text-black p-2">Utvecklare</span></span>
+              <span className="text-gradient"><span className="text-white dark:text-black p-2">{t("hero.developer")}</span></span>
             </h1>
           </div>
 
           {/* Subtitle with accent */}
           <p className="text-xl md:text-2xl text-muted-foreground max-w-xl leading-relaxed text-start">
-            Hej! Jag heter Mona Andreeva. Jag är frontend utvecklare som  skapar digitala upplevelser med passion för detaljer
-            och studerar <span className="text-primary font-medium">.NET Systemutveckling</span>.
+            {t("hero.heroText")} <span className="text-primary font-medium">{t("hero.netDevelopment")}</span>.
           </p>
 
-        
+
           <div className="flex flex-wrap items-center gap-6 pt-6">
             <a
               href="#projects"
               className="group inline-flex items-center gap-3 px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:glow-accent transition-all duration-300"
             >
-              Se projekt
+              {t("hero.toProjects")}
               <span className="group-hover:translate-x-1 transition-transform"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
               </svg></span>
@@ -50,13 +52,13 @@ export const HeroSection = () => {
               href="#contact"
               className="inline-flex items-center gap-3 px-6 py-3 border-gradient rounded-full text-foreground hover:bg-card/50 transition-colors"
             >
-              Kontakt
+              {t("hero.contact")}
             </a>
           </div>
 
           {/* Social with unique hover */}
           <div className="flex items-center gap-4 pt-8">
-            <span className="text-xs text-muted-foreground font-mono uppercase tracking-wider">Hitta mig</span>
+            <span className="text-xs text-muted-foreground font-mono uppercase tracking-wider">{t("hero.findMe")}</span>
             <div className="w-12 h-px bg-border" />
             <a
               href="https://github.com/MonaAndre"
@@ -81,26 +83,14 @@ export const HeroSection = () => {
                 width="43"
                 viewBox="0 0 16 16"
                 fill="none">
-
-
                 <circle cx="8" cy="8" r="8" fill="" />
-
                 <g transform="scale(0.82) translate(1.75 1.75)">
                   <path fill="currentColor"
-                    d="M4.943 6.169H2.542v7.225h2.401V6.169z
-         M3.743 3.934c.837 0 1.358-.554 1.358-1.248
-         -.015-.709-.52-1.248-1.342-1.248S2.4 1.977
-         2.4 2.685c0 .694.521 1.248 1.327 1.248z
-         M8.451 13.394V9.359c0-.216.016-.432.08-.586
-         .173-.431.568-.878 1.232-.878.869 0
-         1.216.662 1.216 1.634v3.865h2.401V9.25
-         c0-2.22-1.184-3.252-2.764-3.252-1.274 0
-         -1.845.7-2.165 1.193v.025h-.016l.016-.025
-         V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                    d="M4.943 6.169H2.542v7.225h2.401V6.169z M3.743 3.934c.837 0 1.358-.554 1.358-1.248 -.015-.709-.52-1.248-1.342-1.248S2.4 1.977 2.4 2.685c0 .694.521 1.248 1.327 1.248z
+                       M8.451 13.394V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25 c0-2.22-1.184-3.252-2.764-3.252-1.274 0
+                       -1.845.7-2.165 1.193v.025h-.016l.016-.025 V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
                 </g>
               </svg>
-
-
             </a>
           </div>
         </div>

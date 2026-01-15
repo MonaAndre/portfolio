@@ -1,0 +1,81 @@
+{
+    "nav": {
+        "about": "About",
+        "projects": "Projects",
+        "contact": "Contact",
+        "skills": "Skills",
+        "viewCv": "View CV",
+        "or": "or",
+        "downloadCv": "Download CV"
+    },
+    "hero": {
+        "openForWork": "Open for work",
+        "frontend": "Frontend",
+        "developer": "Developer",
+        "heroText": "Hi! My name is Mona Andreeva. I am a frontend developer who creates digital experiences with a passion for detail and currently studies",
+        "netDevelopment": ".NET development",
+        "toProjects": "View projects",
+        "contact": "Contact",
+        "findMe": "Find me"
+    },
+    "about": {
+        "aboutMe": "About me",
+        "title": "Creative developer with an eye for",
+        "details": "details",
+        "aboutText": "I am a passionate frontend developer who is deepening my knowledge in system development with a focus on the .NET ecosystem.",
+        "aboutText2": "I combine creativity with technical expertise to build modern web applications that both look great and perform flawlessly.",
+        "yearsExperience": "Years of experience",
+        "completedProjects": "Completed projects"
+    },
+    "skills": {
+        "title": "My tech",
+        "stack": "stack",
+        "skills": "Skills",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "tools": "Tools"
+    },
+    "projects": {
+        "title": "Selected",
+        "projects": "projects",
+        "moreProjects": "More projects",
+        "fascom": {
+            "title": "Translation management application for FASCOM AB",
+            "description": "A degree project developed for Fascom AB. The application was built from scratch with a strong focus on responsive and user-friendly design. I was responsible for the frontend using React and TypeScript and integrated a REST API in collaboration with backend developers. Features include language management, translation keys, filtering, statistics, and support for both light and dark themes."
+        },
+        "findtime": {
+            "title": "FindTime – shared calendar application",
+            "description": "An API-based shared calendar project where users can manage availability to find common time slots. The project focused on data modeling, API structure, and database management."
+        },
+        "chat-csharp": {
+            "title": "Online chat with C# and Socket.IO",
+            "description": "A real-time chat application built using C# and Socket.IO."
+        },
+        "chat-js": {
+            "title": "Online chat",
+            "description": "A real-time chat application where users can register, log in, and communicate with others. The project includes both client and server with authentication, message handling, and data storage."
+        },
+        "webshop": {
+            "title": "Webshop",
+            "description": "A web shop with basic e-commerce functionality such as product listings and a shopping cart. Users can manage products, adjust quantities, and see the total cost in real time."
+        },
+        "todo": {
+            "title": "To-do list",
+            "description": "A clean and simple to-do list application where users can add tasks, mark them as completed, and remove them. The focus was on structure, TypeScript, and usability."
+        }
+    },
+    "contact": {
+        "title": "Let’s build something",
+        "text": "amazing",
+        "together": "together",
+        "cta": "Contact",
+        "contactText": "Do you have a project in mind? I’m always open to discussing new opportunities.",
+        "followMe": "Follow me",
+        "myProjects": "My projects",
+        "network": "Network",
+        "sweden": "Sweden"
+    },
+    "footer": {
+        "backToUp": "Back to top"
+    }
+}

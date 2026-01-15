@@ -1,0 +1,81 @@
+{
+    "nav": {
+        "about": "Om mig",
+        "projects": "Projekt",
+        "contact": "Kontakt",
+        "skills": "Kompetenser",
+        "viewCv": "Visa CV",
+        "or": "eller",
+        "downloadCv": "Ladda ner CV"
+    },
+    "hero": {
+        "openForWork": "Öppen för jobb",
+        "frontend": "Frontend",
+        "developer": "Utvecklare",
+        "heroText": "Hej! Jag heter Mona Andreeva. Jag är frontendutvecklare som skapar digitala upplevelser med passion för detaljer och studerar ",
+        "netDevelopment": ".NET-utveckling",
+        "toProjects": "Se projekt",
+        "contact": "Kontakt",
+        "findMe": "Hitta mig"
+    },
+    "about": {
+        "aboutMe": "Om mig",
+        "title": "Kreativ utvecklare med öga för",
+        "details": "detaljer",
+        "aboutText": "Jag är en passionerad frontendutvecklare som fördjupar mina kunskaper inom systemutveckling med fokus på .NET-ekosystemet.",
+        "aboutText2": "Jag kombinerar kreativitet med teknisk kompetens för att bygga moderna webbapplikationer som både ser bra ut och fungerar felfritt.",
+        "yearsExperience": "År erfarenhet",
+        "completedProjects": "Avslutade projekt"
+    },
+    "skills": {
+        "title": "Mina tekniska",
+        "stack": "stack",
+        "skills": "Kompetenser",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "tools": "Verktyg"
+    },
+    "projects": {
+        "title": "Utvalda",
+        "projects": "projekt",
+        "moreProjects": "Fler projekt",
+        "fascom": {
+            "title": "Översättningsapplikation för FASCOM AB",
+            "description": "Ett examensarbete för Fascom AB. Applikationen utvecklades från grunden med fokus på responsiv och användarvänlig design. Jag ansvarade för frontend i React och TypeScript samt integration mot ett REST API i samarbete med backendutvecklare. Funktionaliteten inkluderar hantering av språk, översättningsnycklar, filtrering, statistik samt stöd för både ljust och mörkt tema."
+        },
+        "findtime": {
+            "title": "FindTime – delad kalenderapplikation",
+            "description": "Ett API-projekt för delad kalender där användare kan skapa och hantera tillgänglighet för att hitta gemensamma tider. Fokus låg på datamodellering, API-struktur och databashantering."
+        },
+        "chat-csharp": {
+            "title": "Onlinechatt med C# och Socket.IO",
+            "description": "En realtidsbaserad chattapplikation byggd med C# och Socket.IO."
+        },
+        "chat-js": {
+            "title": "Onlinechatt",
+            "description": "En realtidsbaserad onlinechatt där användare kan skapa konto, logga in och kommunicera med andra användare. Projektet består av både klient och server med autentisering, meddelandehantering och datalagring."
+        },
+        "webshop": {
+            "title": "Webbshop",
+            "description": "En webbshop med grundläggande e-handelsfunktioner såsom produktlista och varukorg. Användare kan hantera produkter, ändra antal och se total kostnad i realtid."
+        },
+        "todo": {
+            "title": "Att-göra-lista",
+            "description": "En enkel och tydlig att-göra-list-applikation där användare kan lägga till uppgifter, markera dem som klara och ta bort dem. Fokus låg på struktur, TypeScript och användarvänligt gränssnitt."
+        }
+    },
+    "contact": {
+        "title": "Låt oss bygga något",
+        "text": "fantastiskt",
+        "together": "tillsammans",
+        "cta": "Kontakt",
+        "contactText": "Har du ett projekt i åtanke? Jag är alltid öppen för att diskutera nya möjligheter.",
+        "followMe": "Följ mig",
+        "myProjects": "Mina projekt",
+        "network": "Nätverk",
+        "sweden": "Sverige"
+    },
+     "footer": {
+        "backToUp": "Till toppen"
+    }
+}

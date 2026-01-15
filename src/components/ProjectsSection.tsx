@@ -6,23 +6,28 @@ import webshopImg from "../imgs/project3.png";
 import todoImg from "../imgs/project1.png";
 import findTime from "../imgs/projekt5.png";
 import chatCSharp from "../imgs/project6.png";
+import { useTranslation } from "react-i18next";
 
 export const ProjectsSection = () => {
+  const { t } = useTranslation();
   const projects = [
     {
-      title: "Översättningsapplikation för FASCOM AB",
-      description:
-        "Ett projekt för Fascom AB där jag genomförde mitt examensarbete. Applikationen är utvecklad från grunden med fokus på responsiv och användarvänlig design. Jag arbetade med frontend i React och TypeScript samt integration mot ett REST API i samarbete med en backendutvecklare. Funktionalitet inkluderar hantering av språk, översättningsnycklar, filtrering och statistik, samt stöd för både ljus- och mörkt tema.",
-      tech: ["React", "TypeScript", "TailwindCSS", "REST API", "Postman", "Användartester"],
+      id: "fascom",
+      tech: [
+        "React",
+        "TypeScript",
+        "TailwindCSS",
+        "REST API",
+        "Postman",
+        "User testing"
+      ],
       github: null,
       live: null,
       images: [fascom1, fascom2, fascom3],
       featured: true,
     },
     {
-      title: "FindTime (Delad kalenderapplikation)",
-      description:
-        "En API för delad kalender projekt där användare kan skapa och hantera tillgänglighet för att hitta gemensamma tider. Projektet är byggt med fokus på datamodellering, API-struktur och databashantering.",
+      id: "findtime",
       tech: [".NET", "Entity Framework", "PostgreSQL"],
       github: "https://github.com/MonaAndre/FindTime-Backend.git",
       live: null,
@@ -30,19 +35,15 @@ export const ProjectsSection = () => {
       featured: true,
     },
     {
-      title: "Online Chat med C# och Socket.IO",
-      description:
-        "Online Chat med C# och Socket.IO",
-      tech: ["SocketIO", "C#"],
+      id: "chat-csharp",
+      tech: ["Socket.IO", "C#"],
       github: "https://github.com/MonaAndre/ChatExamination.git",
       live: null,
       images: [chatCSharp],
       featured: true,
     },
     {
-      title: "Online Chat",
-      description:
-        "En realtidsbaserad onlinechatt där användare kan skapa konto, logga in och kommunicera med andra användare. Projektet består av både klient och server och inkluderar funktioner för autentisering, meddelandehantering och datalagring.",
+      id: "chat-js",
       tech: ["JavaScript", "CSS", "Node.js", "MySQL"],
       github: "https://github.com/MonaAndre/chatstart-main.git",
       githubServer: "https://github.com/MonaAndre/chatstart-backend.git",
@@ -51,9 +52,7 @@ export const ProjectsSection = () => {
       featured: false,
     },
     {
-      title: "Webbshop",
-      description:
-        "En webbshop med grundläggande e-handelsfunktionalitet såsom produktlista och varukorg. Användare kan lägga till och ta bort produkter, ändra antal och se den totala kostnaden i realtid.",
+      id: "webshop",
       tech: ["JavaScript", "SCSS", "Bootstrap"],
       github: "https://github.com/MonaAndre/the-webshop-team4.git",
       live: "https://webshopmonaandre.netlify.app",
@@ -61,9 +60,7 @@ export const ProjectsSection = () => {
       featured: true,
     },
     {
-      title: "To Do List",
-      description:
-        "En enkel och tydlig to do-list-applikation där användare kan lägga till uppgifter, markera dem som klara och ta bort dem. Fokus låg på struktur, typning med TypeScript och användarvänligt gränssnitt.",
+      id: "todo",
       tech: ["TypeScript", "SCSS", "Bootstrap"],
       github: "https://github.com/MonaAndre/todos-MonaAndre.git",
       live: "https://todolistmonaandre.netlify.app",
@@ -71,8 +68,6 @@ export const ProjectsSection = () => {
       featured: true,
     }
   ];
-
-
 
 
   const featuredProjects = projects.filter(p => p.featured);
@@ -88,21 +83,21 @@ export const ProjectsSection = () => {
         </div>
 
         <h2 className="text-3xl md:text-5xl font-bold mb-16 tracking-tight">
-          Utvalda <span className="bg-linear-to-br from-orange-500 to-fuchsia-500 bg-clip-text text-transparent">projekt</span>
+          {t("projects.title")} <span className="bg-linear-to-br from-orange-500 to-fuchsia-500 bg-clip-text text-transparent">{t("projects.projects")}</span>
         </h2>
 
         {/* Featured projects - large cards */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {featuredProjects.map((project, index) => (
             <div
-              key={project.title}
+              key={project.id}
               className="group relative rounded-3xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-500"
             >
               {/* Project preview area */}
               <div className="aspect-video bg-linear-to-br from-card via-secondary to-card relative overflow-hidden">
                 <img
                   src={project.images?.[0]}
-                  alt={project.title}
+                  alt={t(`projects.${project.id}.title`)}
                   className="absolute inset-0 w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -145,11 +140,9 @@ export const ProjectsSection = () => {
               {/* Project info */}
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
-                  {project.title}
+                  {t(`projects.${project.id}.title`)}
                 </h3>
-                <p className="text-muted-foreground text-sm mb-4">
-                  {project.description}
-                </p>
+                <p>{t(`projects.${project.id}.description`)}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
                     <span
@@ -167,11 +160,11 @@ export const ProjectsSection = () => {
 
         {/* Other projects - list style */}
         <div className="border-t border-border pt-8">
-          <h3 className="text-sm font-mono text-muted-foreground mb-8 uppercase tracking-wider">Fler projekt</h3>
+          <h3 className="text-sm font-mono text-muted-foreground mb-8 uppercase tracking-wider">{t("projects.moreProjects")}</h3>
           <div className="space-y-0">
             {otherProjects.map((project, index) => (
               <a
-                key={project.title}
+                key={project.id}
                 href={project.github ? project.github : "#"} target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center justify-between py-6 border-b border-border hover:px-4 hover:bg-card/50 transition-all duration-300"
@@ -181,12 +174,12 @@ export const ProjectsSection = () => {
                     {String(featuredProjects.length + index + 1).padStart(2, '0')}
                   </span>
                   <span className="font-medium group-hover:text-primary transition-colors">
-                    {project.title}
+                    {project.id}
                   </span>
                 </div>
                 <span className="text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all">  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z" />
-                      </svg></span>
+                  <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z" />
+                </svg></span>
               </a>
             ))}
           </div>
